@@ -12,7 +12,7 @@
 <body>
 
 <div class="container mt-4">
-	<h1 class="text-center mb-4">자유게시판</h1>
+	<h1 class="text-center mb-4">책 벌래게시판</h1>
 	<div class="text-center mb-4">
 		<a href="add" class="btn btn-primary">Add New Post</a>
 	</div>
