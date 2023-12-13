@@ -44,7 +44,14 @@
 					<label>Content:</label>
 					<form:textarea cols="50" rows="5" path="content" class="form-control"/>
 				</div>
-				<!-- Add more fields as needed -->
+				<div class="form-group">
+					<label>Recommendname:</label>
+					<form:input path="recommendname" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Recommendemail:</label>
+					<form:input path="recommendemail" class="form-control"/>
+				</div>
 				<div class="form-group">
 					<input type="submit" value="Edit Post" class="btn btn-primary"/>
 					<input type="button" value="Cancel" onclick="history.back()" class="btn btn-secondary"/>
@@ -57,7 +64,7 @@
 <!-- Optional JavaScript -->
 <!-- jQuery and Bootstrap Bundle (includes Popper) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+<script src=https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 </body>

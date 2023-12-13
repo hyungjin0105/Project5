@@ -35,7 +35,7 @@
         <button type="submit" class="btn btn-primary btn-block">Login</button>
     </form>
     <p class="text-center mt-4">
-        Don't have an account? <a href="register.jsp">Register here</a>
+        Don't have an account? <a href="home.jsp">Register here</a>
     </p>
 </div>
 

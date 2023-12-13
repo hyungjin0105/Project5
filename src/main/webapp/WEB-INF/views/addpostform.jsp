@@ -41,7 +41,14 @@
                     <label>Content:</label>
                     <textarea cols="50" rows="5" name="content" class="form-control"></textarea>
                 </div>
-                <!-- Add more fields as needed -->
+                <div class="form-group">
+                    <label>Recommendname:</label>
+                    <input type="text" name="recommendname" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Recommendemail:</label>
+                    <input type="text" name="recommendemail" class="form-control"/>
+                </div>
                 <div class="form-group">
                     <input type="submit" value="Add Post" class="btn btn-primary"/>
                     <input type="button" value="Cancel" onclick="history.back()" class="btn btn-secondary"/>
