@@ -34,9 +34,7 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
     </form>
-    <p class="text-center mt-4">
-        Don't have an account? <a href="home.jsp">Register here</a>
-    </p>
+
 </div>
 
 <script>
@@ -52,7 +50,7 @@
         if(username === hardcodedUsername && password === hardcodedPassword) {
             location.href = 'board/posts';
         } else {
-            alert('Invalid username or password');
+            alert('please enter user as ID and pass as password');
         }
     };
 </script>

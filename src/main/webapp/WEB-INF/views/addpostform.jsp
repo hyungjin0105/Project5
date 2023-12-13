@@ -47,7 +47,11 @@
                 </div>
                 <div class="form-group">
                     <label>Recommendemail:</label>
-                    <input type="text" name="recommendemail" class="form-control"/>
+                    <input type="text" name="recommendemail" class="form-control" placeholder="emal@email.com"/>
+                </div>
+                <div class="form-group">
+                    <label>Publishdate:</label>
+                    <input type="text" name="publishdate" class="form-control" placeholder="YYMM-MM-DD"/>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Add Post" class="btn btn-primary"/>

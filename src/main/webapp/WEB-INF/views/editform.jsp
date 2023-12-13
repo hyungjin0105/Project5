@@ -53,6 +53,10 @@
 					<form:input path="recommendemail" class="form-control"/>
 				</div>
 				<div class="form-group">
+					<label>Publishdate:</label>
+					<form:input path="publishdate" class="form-control"/>
+				</div>
+				<div class="form-group">
 					<input type="submit" value="Edit Post" class="btn btn-primary"/>
 					<input type="button" value="Cancel" onclick="history.back()" class="btn btn-secondary"/>
 				</div>

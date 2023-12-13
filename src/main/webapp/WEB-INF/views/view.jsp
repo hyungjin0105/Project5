@@ -25,10 +25,10 @@
             <h5 class="card-title">${list.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${list.category}</h6>
             <p class="card-text">${list.content}</p>
-            <p class="card-text"><small class="text-muted">Written by ${list.writer} on ${list.regdate}</small></p>
+            <p class="card-text"><small class="text-muted">Written by ${list.writer} on ${list.publishdate}</small></p>
             <p class="card-text"><small class="text-muted">Recommended by ${list.recommendname}</small></p>
             <p class="card-text"><small class="text-muted">Contact: ${list.recommendemail}</small></p>
-            <p class="card-text"><small class="text-muted">Published on ${list.publishdate}</small></p>
+            <p class="card-text"><small class="text-muted">Registered on ${list.regdate}</small></p>
             <button type="button" class="btn btn-primary" onclick="location.href='../posts'">Back to List</button>
         </div>
     </div>

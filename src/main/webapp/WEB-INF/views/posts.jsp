@@ -8,6 +8,36 @@
 	<title>free board</title>
 	<!-- Include Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		.card {
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+		}
+		.card-body {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+		}
+
+		.content-scrollable {
+			overflow-y: auto;
+			margin-bottom: 1rem;
+		}
+
+		.d-flex {
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			flex-shrink: 0;
+		}
+
+		.d-flex > * {
+			flex-shrink: 1;
+			margin: 0.25rem;
+		}
+
+	</style>
 </head>
 <body>
 
@@ -25,8 +55,10 @@
 					</div>
 					<div class="card-body">
 						<h5 class="card-title">${u.title}</h5>
-						<p class="card-text">${u.content}</p>
-						<div class="d-flex justify-content-between align-items-center">
+						<div class="content-scrollable">
+							<p class="card-text">${u.content}</p>
+						</div>
+						<div class="d-flex justify-content-between align-items-center mt-auto">
 							<small class="text-muted">${u.regdate}</small>
 							<div class="btn-group">
 								<a href="view/${u.seq}" class="btn btn-sm btn-outline-secondary">View</a>
@@ -37,7 +69,8 @@
 					</div>
 					<div class="card-footer text-muted">
 						Recommended by: ${u.recommendname} <br>
-						Contact: ${u.recommendemail}
+						Contact: ${u.recommendemail} <br>
+						Publishdate:${u.publishdate}
 					</div>
 				</div>
 			</div>
