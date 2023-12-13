@@ -1,78 +1,62 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.crud.dao.BoardDAO, com.crud.bean.BoardVO,java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>free board</title>
-<style>
-#list {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-#list td, #list th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align:center;
-}
-#list tr:nth-child(even){background-color: #f2f2f2;}
-#list tr:hover {background-color: #ddd;}
-#list th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #006bb3;
-  color: white;
-}
-</style>
+	<meta charset="UTF-8">
+	<title>free board</title>
+	<!-- Include Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+	<h1 class="text-center mb-4">자유게시판</h1>
+	<div class="text-center mb-4">
+		<a href="add" class="btn btn-primary">Add New Post</a>
+	</div>
+	<div class="row">
+		<c:forEach items="${list}" var="u">
+			<div class="col-md-4">
+				<div class="card mb-4 shadow-sm">
+					<div class="card-header">
+							${u.category}
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">${u.title}</h5>
+						<p class="card-text">${u.content}</p>
+						<div class="d-flex justify-content-between align-items-center">
+							<small class="text-muted">${u.regdate}</small>
+							<div class="btn-group">
+								<a href="view/${u.seq}" class="btn btn-sm btn-outline-secondary">View</a>
+								<a href="editform/${u.seq}" class="btn btn-sm btn-outline-secondary">Edit</a>
+								<button onclick="delete_ok('${u.seq}')" class="btn btn-sm btn-outline-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer text-muted">
+						Recommended by: ${u.recommendname} <br>
+						Contact: ${u.recommendemail}
+					</div>
+				</div>
+			</div>
+		</c:forEach>
+	</div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
 <script>
-	function delete_ok(id){
+	function delete_ok(id) {
 		let a = confirm("정말로 삭제하겠습니까?");
 		if(a) location.href='deleteok/' + id;
 	}
 </script>
-</head>
-<body>
-<div>
-	<h1>자유게시판</h1>
 
-</div>
-<br>
-<table id="list" width="90%">
-<tr>
-	<th>Id</th>
-	<th>Category</th>
-	<th>Title</th>
-	<th>Writer</th>
-	<th>Content</th>
-	<th>Regdate</th>
-	<th>Recommedname</th>
-	<th>Recommendemail</th>
-	<th>publishdate</th>
-	<th>View</th>
-	<th>Edit</th>
-	<th>Delete</th>
-</tr>
-<c:forEach items="${list}" var="u">
-	<tr>
-		<td>${u.seq}</td>
-		<td>${u.category}</td>
-		<td>${u.title}</td>
-		<td>${u.writer}</td>
-		<td>${u.content}</td>
-		<td>${u.regdate}</td>
-		<td>${u.recommendname}</td>
-		<td>${u.recommendemail}</td>
-		<td>${u.publishdate}</td>
-		<td><a href="view/${u.seq}">Detail</a></td>
-		<td><a href="editform/${u.seq}">Edit</a></td>
-		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
-	</tr>
-</c:forEach>
-</table>
-<br/><a href="add">Add New Post</a>
 </body>
 </html>

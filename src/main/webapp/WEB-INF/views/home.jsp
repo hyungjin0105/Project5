@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,15 +21,16 @@
 <body>
 
 <div class="login-container">
-    <h2 class="text-center">Login</h2>
-    <form action="loginAction" method="post"> <!-- Replace with your login action -->
+    <h2 class="text-center">책 벌래에 오신것을 환영합니다</h2>
+    <h3 class="text-center">로그인</h3>
+    <form id="loginForm">
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" required>
+            <input type="text" class="form-control" id="username" required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" required>
+            <input type="password" class="form-control" id="password" required>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Login</button>
     </form>
@@ -38,6 +38,24 @@
         Don't have an account? <a href="register.jsp">Register here</a>
     </p>
 </div>
+
+<script>
+    document.getElementById('loginForm').onsubmit = function(event) {
+        event.preventDefault();
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        var hardcodedUsername = 'user';
+        var hardcodedPassword = 'pass';
+
+        if(username === hardcodedUsername && password === hardcodedPassword) {
+            location.href = 'board/posts';
+        } else {
+            alert('Invalid username or password');
+        }
+    };
+</script>
 
 </body>
 </html>

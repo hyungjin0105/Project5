@@ -1,27 +1,61 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Add New Post</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .card {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Add New Post</h1>
-<form action="addok" method="post">
-<table id="edit">
-<tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
-<tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
-<tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-<tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
-    <tr><td>Recommenname:</td><td><input type="text" name="recommendname"/></td></tr>
-    <tr><td>Recommenemail:</td><td><input type="text" name="recommendemail"/></td></tr>
-    <tr><td>Publishdate:</td><td><input type="text" name="publishdate"/></td></tr>
+<div class="container">
+    <div class="card">
+        <h1 class="card-header">Add New Post</h1>
+        <div class="card-body">
+            <form action="addok" method="post">
+                <div class="form-group">
+                    <label>Category:</label>
+                    <input type="text" name="category" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Title:</label>
+                    <input type="text" name="title" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Writer:</label>
+                    <input type="text" name="writer" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Content:</label>
+                    <textarea cols="50" rows="5" name="content" class="form-control"></textarea>
+                </div>
+                <!-- Add more fields as needed -->
+                <div class="form-group">
+                    <input type="submit" value="Add Post" class="btn btn-primary"/>
+                    <input type="button" value="Cancel" onclick="history.back()" class="btn btn-secondary"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-<tr><td><a href="posts">View All Records</a></td><td align="right"><input type="button" value="Cancel" onclick="history.back()"/></td><td align="right"><input type="submit" value="Add Post"/></td></tr>
-</table>
-</form>
+<!-- Optional JavaScript -->
+<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
