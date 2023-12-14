@@ -30,7 +30,14 @@
 				<form:hidden path="seq"/>
 				<div class="form-group">
 					<label>Category:</label>
-					<form:input path="category" class="form-control"/>
+					<form:select path="category" class="form-control">
+						<form:option value="인문" label="인문"/>
+						<form:option value="경제" label="경제"/>
+						<form:option value="철학" label="철학"/>
+						<form:option value="역사" label="역사"/>
+						<form:option value="동물" label="동물"/>
+						<form:option value="수학" label="수학"/>
+					</form:select>
 				</div>
 				<div class="form-group">
 					<label>Title:</label>
@@ -50,11 +57,11 @@
 				</div>
 				<div class="form-group">
 					<label>Recommendemail:</label>
-					<form:input path="recommendemail" class="form-control"/>
+					<form:input path="recommendemail" class="form-control" type="email"/>
 				</div>
 				<div class="form-group">
 					<label>Publishdate:</label>
-					<form:input path="publishdate" class="form-control"/>
+					<form:input path="publishdate" class="form-control" type="date"/>
 				</div>
 				<div class="form-group">
 					<input type="submit" value="Edit Post" class="btn btn-primary"/>

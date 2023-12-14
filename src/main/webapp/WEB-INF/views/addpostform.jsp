@@ -27,7 +27,14 @@
             <form action="addok" method="post">
                 <div class="form-group">
                     <label>Category:</label>
-                    <input type="text" name="category" class="form-control"/>
+                    <select name="category" class="form-control">
+                        <option value="인문">인문</option>
+                        <option value="경제">경제</option>
+                        <option value="철학">철학</option>
+                        <option value="역사">역사</option>
+                        <option value="동물">동물</option>
+                        <option value="수학">수학</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Title:</label>
@@ -47,11 +54,11 @@
                 </div>
                 <div class="form-group">
                     <label>Recommendemail:</label>
-                    <input type="text" name="recommendemail" class="form-control" placeholder="emal@email.com"/>
+                    <input type="email" name="recommendemail" class="form-control" placeholder="emal@email.com"/>
                 </div>
                 <div class="form-group">
                     <label>Publishdate:</label>
-                    <input type="text" name="publishdate" class="form-control" placeholder="YYMM-MM-DD"/>
+                    <input type="date" name="publishdate" class="form-control" placeholder="YYMM-MM-DD"/>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Add Post" class="btn btn-primary"/>
